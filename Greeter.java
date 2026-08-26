@@ -1,4 +1,4 @@
-public class Greeter { // ui pass
+public class Greeter {
     public static String hello(String name) {
         return "Hello, " + name + "!";
     }
