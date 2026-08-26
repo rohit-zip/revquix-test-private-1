@@ -1,0 +1,19 @@
+notes.txt -- not a program.
+
+A Java project may hold .txt, .properties, .json and .csv files, and none of
+them is something you can press Run on.
+
+Open this file and look at the header: it says "runs Main.java", and the filled
+marker in the tree is on Main.java, not on this row. Press Run and Main.java is
+what executes.
+
+That is the ONE case where Run does not follow the file you are viewing -- the
+open file has to be something the language can actually launch. Everywhere else,
+what you see is what runs.
+
+This file still reaches the runner. It is written into the job beside the
+compiled classes, so a class here can do:
+
+    Files.readString(Path.of("notes.txt"))
+
+It is simply never handed to javac.
